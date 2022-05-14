@@ -17,11 +17,21 @@ export const counterSlice = createSlice({
     decrement: (state) => {
       state.count -= 1;
     },
+    decreaseFive: (state) => {
+      state.count -= 5;
+    },
+    reset: (state) => {
+      state.count = 0;
+    },
+    incrementByAmount: (state, action) => {
+      state.count += action.payload;
+    },
   },
 });
 
 //export our actions
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, decreaseFive, reset, incrementByAmount } =
+  counterSlice.actions;
 
 //export our counterSlice - note we're exporting just the reducer
 export default counterSlice.reducer;
