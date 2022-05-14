@@ -17,7 +17,8 @@ const Counter = () => {
 
   //state for user input
   const [incrementAmount, setIncrementAmount] = useState(0);
-
+  //make sure it's a number and
+  const addValue = Number(incrementAmount) || 0;
   //function that resets local state and dispatches reset action to redux
   const resetAll = () => {
     dispatch(reset());
@@ -34,12 +35,14 @@ const Counter = () => {
           <button onClick={() => resetAll()}>reset</button>
         </div>
         <input
-          type="text"
+          type="number"
+          min="1"
+          max="500"
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
         <div>
-          <button onClick={() => dispatch(incrementByAmount(incrementAmount))}>
+          <button onClick={() => dispatch(incrementByAmount(addValue))}>
             Add amount
           </button>
         </div>
