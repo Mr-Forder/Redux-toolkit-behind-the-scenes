@@ -1,4 +1,4 @@
-![mutat](https://user-images.githubusercontent.com/66869833/197535880-a012000d-28d5-4b8c-9735-00de7b9d94b7.jpg)
+![rtkheader](https://user-images.githubusercontent.com/66869833/197547644-b11750ef-8f42-4ab6-b9ba-711b0c5fb054.jpg)
 
 # Redux Toolkit Behind the Scenes
 
